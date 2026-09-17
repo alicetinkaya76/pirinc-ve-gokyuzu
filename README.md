@@ -1,47 +1,35 @@
 # Pirinç ve Gökyüzü
 
-Fuat Sezgin'in **İslam'da Bilim ve Teknik — Arap-İslam Bilimleri Tarihine Giriş** (Cilt I)
-kitabından kurulmuş etkileşimli müze. Tek dosya, derleme adımı yok; `index.html`
-doğrudan GitHub Pages'te yayımlanabilir.
+Fuat Sezgin'in **İslam'da Bilim ve Teknik — Arap-İslam Bilimleri Tarihine Giriş** (Cilt I) kitabından hareketle hazırlanmış etkileşimli bilim tarihi müzesi.
 
-Site bir liste değil, bir **sınav** olarak kurgulandı: kitabın üç iddiası var, her biri
-kitabın kendi malzemesiyle denetlenebilen bir modüle bağlı.
+[Canlı siteyi aç](https://alicetinkaya76.github.io/pirinc-ve-gokyuzu/)
 
-## Modüller
+## İçerik
 
-**Çalışan usturlap.** Çizim değil, hesaplanan alet. Safiha seçilen enleme göre gerçek
-stereografik izdüşümle yeniden çizilir (ufuk, eşit yükseklik daireleri, azimut yayları);
-ankebût üzerinde on sekiz yıldız gerçek konumunda durur ve seçilen yıla presesyon
-düzeltmesi uygulanır. Ankebût döndürülünce hangi yıldızın ufkun üstünde kaldığı ve kaç
-derece yükseldiği hesaplanır. Enlem değiştirince safihanın baştan çizilmesi bilinçlidir:
-gerçek usturlapta her enlem için ayrı plaka taşınırdı; Zerkâlî'nin "evrensel disk"i tam
-bu sorunu çözmek için doğmuştu.
+- **Batlamyus'tan Kopernik'e sekiz durak:** Gözlem, çeviri, eleştiri, kurumlar ve bilginin dolaşımı üzerinden tarihsel anlatı.
+- **Ekuanttan Kopernik'e geçiş:** Yeni geometrik araçlarla Dünya'nın hareketli kabul edilmesini ayrı değişiklikler olarak açıklayan görseller ve karşılaştırma.
+- **17 kavram notu:** Usturlap, safîha, rete, zîc, ekuant, Tûsî çifti, kardan askısı ve piston gibi terimler için tanımlar ve gündelik örnekler.
+- **Hacimli 3B atölye:** Usturlap, pusula, altı pistonlu su mekanizması, Kavs ez-ziyâr ve Tabak Menâtık. Parçaları ayırma, döndürme, yakınlaştırma, seçme ve büyük görünüm; pusula ve pompa için hareket/adım kontrolleri.
+- **Çalışan modeller:** Enleme göre hesaplanan usturlap, ekuant ve Tûsî çifti; ölçüm karşılaştırmaları ve Akdeniz'in haritalardaki temsili.
+- **Koleksiyon ve zaman çizelgeleri:** 610 koleksiyon kaydı, 616 âlim kaydı ve 534 olay kaydı; arama, filtreleme ve kaynak bağlantıları.
 
-Parça adlarının sekizi de kitapta geçiyor: limbus, ankebût/rete, burçlar dairesi, plaka,
-ufuk, alhidade, evrensel disk, ekvator köprüsü.
+Anlatı, teknik eğitim almamış okuyucuların da izleyebilmesi için tarihsel sorular ve model okuma notlarıyla desteklenir. Telefonlar için düzen, dokunmatik kontroller, kaydırılabilir pencereler ve iki tema bulunur.
 
-**Ekuant sorunu.** İbnü'l-Heysem'in "Ptoleme'ye Karşı Şüpheler"deki itirazı ekranda
-kanıtlanır: ekuant kaçıklığı varken, deferent merkezinden görülen açı artışları eşit
-zaman aralıklarında 7,8° ile 12,2° arasında oynar — 1,56 kat fark. Kaçıklık sıfıra
-çekilince her adım tam 10,000° olur. Yanında Tûsî'nin çözümü, teoremi kendi ifadesiyle.
+## Kaynak ve yöntem
 
-**Doğruluk defteri.** Kitabın bugünkü değerle birlikte verdiği dokuz ölçüm, en isabetliden
-en yanlışa. Sapma yüzdeleri kitabın kendi rakamlarından hesaplandı. Defter kitabı hem
-doğruluyor hem sınırlıyor: Roma'nın boylamı %2 sapmayla isabetli, Bağdat–Mekke ölçümü %35
-yanlış.
+Kitaptan çıkarılan kaynak kayıtları korunmuştur. Hikâye, kavram açıklamaları ve bilim çevresi notları editoryal eklerdir; ilgili kaynak bağlantıları site içinde belirtilir. Matematiksel benzerlik ile tarihsel aktarımın belgelenmesi ayrı tutulur.
 
-**Akdeniz'in daralması.** Batlamyus 62°, Arap tashihi 52°, Endülüs–Mağrip 44°, bugün 42°;
-Avrupa 1700'e kadar Batlamyus'ta kaldı.
+Kayıt sayıları benzersiz kişi sayısı değildir. Âlim çizelgesinde 381 kaydın tarihi yerleştirilebilir; 235 kayıt zaman bilgisi belirsiz listede erişilebilir. Kaynakla eşleştirilen 93 kaydın bilim çevresi gösterilir; diğerleri sınıflandırılmamış olarak korunur. Bu başlıklar din veya etnisite sınıflandırması ya da uygarlıkların başarı sıralaması değildir.
 
-**Nesne vitrini** (610 kayıt), **müze etiketleri**, **zaman çizgisi** (534 tarihli olay),
-**âlim dizini** (616 kişi).
+Olay çizelgesi kaynakta yazan tarih metnini kullanır: 473 tarihli ve 61 belirsiz kayıt erişilebilirdir. Doğrulanan kişilerde doğrudan TDV maddeleri, diğerlerinde açıkça adlandırılmış içerik aramaları bulunur. İslam Tarih Atlası bağlantısı atlas portalını açar.
 
-## Veri
+3B parça adları kaynaktan gelir. Geometri, oran ve bağlantılar açıklama amaçlı yeniden kurgulardır; ölçekli teknik imalat çizimleri değildir.
 
-Bütün kayıtlar kitabın metninden çıkarıldı; kitapta geçmeyen bilgi eklenmedi, tarih
-verilmemişse alan boş bırakıldı. Tek istisna usturlabın yıldız kataloğudur: parça adları
-ve aletin işleyişi kitaptan, yıldızların gök koordinatları astronomiden gelir. Bu,
-Sezgin'in kendi yöntemidir — metinde tarif edileni yeniden yapmak.
+## Kullanım ve yayın
+
+`index.html` tek dosyadır; npm, derleme adımı veya harici JavaScript kütüphanesi gerektirmez. 3B atölye WebGL kullanır; destek bulunmadığında Canvas yedek görünümü vardır. Yazı tipleri için isteğe bağlı Google Fonts bağlantıları ve sistem yazı tipi yedekleri bulunur.
+
+GitHub Pages, mevcut ayarla `main` dalının kök dizinini yayımlar. Güncelleme için `index.html` bu dizinde değiştirilir. Dosya yerelde de doğrudan açılabilir.
 
 ## Kardeş yapım
 
