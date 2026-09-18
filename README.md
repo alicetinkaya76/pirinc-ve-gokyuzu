@@ -17,7 +17,7 @@ Anlatı, teknik eğitim almamış okuyucuların da izleyebilmesi için tarihsel 
 
 ## Kaynak ve yöntem
 
-Kitaptan çıkarılan kaynak kayıtları korunmuştur. Hikâye, kavram açıklamaları ve bilim çevresi notları editoryal eklerdir; ilgili kaynak bağlantıları site içinde belirtilir. Matematiksel benzerlik ile tarihsel aktarımın belgelenmesi ayrı tutulur.
+Kitaptan çıkarılan kaynak kayıtlarının yapısı, sırası, tarihleri ve sayıları korunmuştur; görünen metinlerde eksik Türkçe harfler ve açık yazım hataları düzenlenmiştir. Âlim dizininde Türkçe harf kullanmadan da arama yapılabilir. Hikâye, kavram açıklamaları ve bilim çevresi notları editoryal eklerdir; ilgili kaynak bağlantıları site içinde belirtilir. Matematiksel benzerlik ile tarihsel aktarımın belgelenmesi ayrı tutulur.
 
 Kayıt sayıları benzersiz kişi sayısı değildir. Âlim çizelgesinde 381 kaydın tarihi yerleştirilebilir; 235 kayıt zaman bilgisi belirsiz listede erişilebilir. Kaynakla eşleştirilen 93 kaydın bilim çevresi gösterilir; diğerleri sınıflandırılmamış olarak korunur. Bu başlıklar din veya etnisite sınıflandırması ya da uygarlıkların başarı sıralaması değildir.
 
