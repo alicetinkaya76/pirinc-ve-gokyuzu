@@ -2,6 +2,7 @@
 <html lang="tr">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none' stroke='%23c08a3e' stroke-width='1.8'%3E%3Ccircle cx='20' cy='20' r='16'/%3E%3Cellipse cx='20' cy='20' rx='9' ry='16' transform='rotate(35 20 20)'/%3E%3Cpath d='M3 27 37 13'/%3E%3C/svg%3E">
 <title>Pirinç ve Gökyüzü — Etkileşimli Bilim Tarihi Müzesi</title>
 <meta name="description" content="Fuat Sezgin’in İslam’da Bilim ve Teknik kitabından aletler, haritalar ve insanlar. Etkileşimli modeller ve kaynak kayıtlarıyla bir dijital müze.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +63,7 @@ body{margin:0;background:var(--ink);color:var(--text);font-family:var(--body);
 .wrap{max-width:var(--wide);margin:0 auto;padding-inline:20px}
 .prose{max-width:var(--col);margin:0 auto}
 .prose p{margin:0 0 1.15em}
-section{padding-block:76px;border-top:1px solid var(--rule2);scroll-margin-top:70px}
+section{padding-block:76px;border-top:1px solid var(--rule2);scroll-margin-top:12px}
 section:first-of-type{border-top:0}
 h1,h2,h3,h4{font-family:var(--disp);font-weight:600;text-wrap:balance;margin:0}
 .kick{font-family:var(--ui);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
@@ -286,13 +287,14 @@ select{font-family:var(--ui);font-size:13px;color:var(--text);background:var(--i
 
 /* ---------- defter ---------- */
 .dft{display:flex;flex-direction:column;gap:2px}
-.dftr{display:grid;grid-template-columns:minmax(150px,1.4fr) minmax(0,2.4fr) auto;gap:16px;
+.dftr{display:grid;grid-template-columns:minmax(150px,1.4fr) minmax(0,2.4fr) 230px;gap:16px;
   align-items:center;padding:13px 4px;border-bottom:1px solid var(--rule2)}
 @media(max-width:700px){.dftr{grid-template-columns:1fr;gap:7px}}
 .dftr .dk{font-family:var(--disp);font-size:18px;color:var(--brass-lit);line-height:1.25}
 .dftr .dkm{font-family:var(--ui);font-size:10.5px;color:var(--faint);margin-top:2px}
 .dftbar{position:relative;height:18px}
 .dftbar .tr{position:absolute;top:50%;height:1px;background:var(--rule2);left:0;right:0}
+.dftbar .z{position:absolute;top:2px;bottom:2px;left:50%;width:1px;background:var(--rule)}
 .dftbar .mk{position:absolute;top:50%;transform:translate(-50%,-50%);width:11px;height:11px;border-radius:50%}
 .dftbar .mk.b{background:var(--verd)}
 .dftbar .mk.k{background:var(--rust)}
@@ -310,9 +312,9 @@ select{font-family:var(--ui);font-size:13px;color:var(--text);background:var(--i
 .dftleg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
 
 /* ---------- akdeniz ---------- */
-.akd{display:flex;flex-direction:column;gap:16px}
-.akdr{display:grid;grid-template-columns:minmax(120px,auto) minmax(0,1fr) auto;gap:14px;align-items:center}
-@media(max-width:620px){.akdr{grid-template-columns:1fr;gap:6px}}
+.akd{display:grid;grid-template-columns:minmax(120px,max-content) minmax(0,1fr) auto;column-gap:14px;row-gap:16px}
+.akdr{grid-column:1/-1;display:grid;grid-template-columns:subgrid;align-items:center}
+@media(max-width:620px){.akd{grid-template-columns:minmax(0,1fr)}.akdr{grid-template-columns:1fr;gap:6px}}
 .akdr .an{font-family:var(--disp);font-size:19px;color:var(--brass-lit)}
 .akdr .an small{display:block;font-family:var(--ui);font-size:10.5px;color:var(--faint);letter-spacing:.06em}
 .akdb{height:22px;background:color-mix(in srgb,var(--brass) 14%,transparent);position:relative;border-radius:2px;
@@ -405,10 +407,10 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 .m-menu{display:none;border:1px solid var(--rule);background:transparent;width:36px;height:36px;padding:10px;cursor:pointer}
 .m-menu span{display:block;height:1px;background:var(--text);margin:4px 0}
 .museum #prog{background:var(--brass);height:2px}
-.museum section{padding-block:100px;scroll-margin-top:98px}
+.museum section{padding-block:100px;scroll-margin-top:12px}
 .museum .wrap{padding-inline:28px}
 .museum h2 em,.m-section-intro h2 em{font-weight:400;color:var(--brass-lit)}
-.museum .hero{display:block;min-height:auto;padding:70px 0 0;text-align:left;overflow:hidden;border:0}
+.museum .hero{display:block;place-items:normal;min-height:auto;padding:70px 0 0;text-align:left;overflow:hidden;border:0}
 .museum .hero .sky{opacity:.17;pointer-events:none}
 .m-hero-grid{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:64px;position:relative}
 .museum .hero .meta{font-size:9px;letter-spacing:.13em;margin:0 0 32px;display:flex;align-items:center;gap:9px;line-height:1.7;color:var(--dim)}
@@ -503,9 +505,9 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 .museum .lbl::after{display:none}
 .museum .tl{padding-left:0;max-width:930px;margin:auto}
 .museum .tl::before{left:118px;background:var(--rule)}
-.museum .tev{padding:21px 0 21px 148px;border-bottom:1px solid var(--rule2);min-height:92px}
+.museum .tev{padding:21px 0 21px 148px;border-bottom:1px solid var(--rule2);min-height:92px;display:flow-root}
 .museum .tev::before{left:115px;top:29px;width:7px;height:7px;border-color:var(--brass)}
-.museum .tev .ty{position:absolute;left:0;top:24px;width:95px;font-size:11px;line-height:1.5;color:var(--brass-lit)}
+.museum .tev .ty{position:static;float:left;width:95px;margin:3px 0 0 -148px;font-size:11px;line-height:1.5;color:var(--brass-lit)}
 .museum .tev .tb{font-size:24px;line-height:1.2;color:var(--text)}
 .museum .tev .td{font-size:12px;max-width:75ch;line-height:1.8}
 .museum .stab{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
@@ -537,7 +539,7 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
   .m-hero-deck{font-size:25px}.museum .hero .lead{font-size:13px}.museum .hero .cta{gap:12px}
   .museum .hero .cta a{font-size:11px;padding:12px}.m-hero-object figcaption .ar{font-size:18px}.m-object-top{font-size:8px}
   .m-archive-strip{grid-template-columns:repeat(4,1fr);margin-top:38px}.m-archive-strip p{display:none}
-  .museum section{padding-block:74px;scroll-margin-top:85px}.m-intro-grid{gap:40px}.m-section-intro{gap:24px}
+  .museum section{padding-block:74px;scroll-margin-top:12px}.m-intro-grid{gap:40px}.m-section-intro{gap:24px}
   .m-path{padding:22px 19px}.m-path h3{font-size:25px}.m-path svg{height:124px}.m-path p{font-size:12px}
   .museum .sect-h{gap:24px}.museum .astro-lab{grid-template-columns:1fr}.museum .labels,.museum .stab{grid-template-columns:repeat(2,minmax(0,1fr))}
   .m-footer-inner{gap:40px}.museum .tezc{padding:22px}.museum .tezc h3{font-size:25px}
@@ -560,7 +562,7 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
   .museum .case{padding:18px}.museum .tez{grid-template-columns:1fr}.museum .tezc,.museum .tezc:first-child,.museum .tezc:last-child{padding:24px 0;border:0;border-bottom:1px solid var(--rule)}.museum .tezc:last-child{border-bottom:0}
   .museum .tezc h3{font-size:29px;max-width:22ch}.museum .tezc p{max-width:47ch}.museum .labels,.museum .stab{grid-template-columns:1fr}
   .museum .eq2{grid-template-columns:minmax(0,1fr);gap:25px}.museum .alinti{padding-left:18px}.museum .alinti blockquote{font-size:24px}
-  .museum .tl::before{left:9px}.museum .tev{padding:20px 0 20px 31px}.museum .tev::before{left:6px;top:27px}.museum .tev .ty{position:static;width:auto;margin-bottom:9px}.museum .tev .tb{font-size:24px}
+  .museum .tl::before{left:9px}.museum .tev{padding:20px 0 20px 31px}.museum .tev::before{left:6px;top:27px}.museum .tev .ty{position:static;float:none;width:auto;margin:0 0 9px}.museum .tev .tb{font-size:24px}
   .museum .filters{gap:6px}.museum .chip{font-size:10.5px;padding:8px 10px}.museum .search{max-width:none;width:100%;flex-basis:100%}
   .museum .pitem .nm{font-size:21px}.museum .pitem .ds{font-size:11.5px}.museum .lbl{padding:24px}.museum .lbl h4{font-size:28px}
   .museum footer{padding:48px 22px 30px}.m-footer-inner{grid-template-columns:1fr;gap:30px}.m-footer-brand h2{font-size:38px}.m-footer-bottom{font-size:9px}
@@ -641,7 +643,7 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 .ms-reading-bar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:18px;border-block:1px solid var(--rule);margin-top:32px}
 .ms-reading-bar>span{font:10px/1.6 var(--ui);letter-spacing:.02em;color:var(--dim)}
 .ms-route{position:relative}
-.ms-stage{border-bottom:1px solid var(--rule);position:relative;scroll-margin-top:108px}
+.ms-stage{border-bottom:1px solid var(--rule);position:relative;scroll-margin-top:12px}
 .ms-stage::before{content:"";position:absolute;left:133px;top:0;bottom:0;border-left:1px solid var(--rule2);pointer-events:none}
 .ms-stage>summary{display:grid;grid-template-columns:106px minmax(0,1fr) 26px;gap:56px;align-items:center;padding:29px 7px 29px 0;cursor:pointer;list-style:none;position:relative;min-height:140px}
 .ms-stage>summary::-webkit-details-marker,.mglo-item>summary::-webkit-details-marker{display:none}
@@ -673,7 +675,7 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 .museum #kavramlar{background:var(--ink2);border-top:1px solid var(--rule2)}
 .mglo-editorial{font:12px/1.8 var(--ui);color:var(--dim);max-width:85ch;margin:0 0 28px}
 .mglo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;align-items:start}
-.mglo-item{border-top:1px solid var(--rule);scroll-margin-top:106px;min-width:0}
+.mglo-item{border-top:1px solid var(--rule);scroll-margin-top:12px;min-width:0}
 .mglo-item>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 8px 22px 0;cursor:pointer;min-height:128px}
 .mglo-category{display:block;font:8.5px/1.5 var(--ui);letter-spacing:.11em;text-transform:uppercase;color:var(--verd);margin-bottom:9px}
 .mglo-name{display:block;font:28px/1.15 var(--disp);color:var(--text);letter-spacing:-.01em}
@@ -711,7 +713,7 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 .st-lane h4{margin:0;font:21px/1.15 var(--disp);font-weight:500;color:var(--st-lane-color)}
 .st-lane .st-lane-count{display:block;font:10px/1.7 var(--ui);margin-top:9px;color:var(--dim)}
 .st-periods{display:grid;grid-template-columns:repeat(var(--st-bins),minmax(0,1fr));gap:5px;min-width:0}
-.st-bin{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0;padding:4px 1px 6px;border:1px solid transparent;border-radius:2px;background:transparent;color:var(--dim);cursor:pointer;font:9px/1.5 var(--ui)}
+.st-bin{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;padding:4px 1px 6px;border:1px solid transparent;border-radius:2px;background:transparent;color:var(--dim);cursor:pointer;font:9px/1.5 var(--ui)}
 .st-bin:hover:not(:disabled){background:var(--case)}.st-bin[aria-pressed=true]{border-color:var(--st-lane-color);background:var(--case)}.st-bin:disabled{opacity:.65;cursor:default}
 .st-bin svg{display:block;width:100%;height:57px;overflow:visible}
 .st-bin rect{fill:var(--st-lane-color)}.st-bin line{stroke:var(--rule);stroke-width:1}
@@ -723,7 +725,7 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 .st-unplaced p{font:12px/1.8 var(--ui);color:var(--dim);margin:0}.st-unplaced p strong{color:var(--text);font-weight:500}.st-unplaced button{flex:none}
 .st-results-head{margin-bottom:23px}.st-results-head p{font:11px/1.8 var(--ui);color:var(--dim);margin:0}
 .st-records{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.st-record{background:var(--case);padding:23px;border:1px solid var(--rule);display:flex;flex-direction:column;min-width:0;scroll-margin-top:100px}
+.st-record{background:var(--case);padding:23px;border:1px solid var(--rule);display:flex;flex-direction:column;min-width:0;scroll-margin-top:12px}
 .st-record .st-record-field{font:9px/1.5 var(--ui);letter-spacing:.09em;text-transform:uppercase;color:var(--verd);margin:0 0 13px}
 .st-record h4{font:26px/1.12 var(--disp);font-weight:500;color:var(--text);margin:0 0 11px;overflow-wrap:anywhere}
 .st-source-date{font:10.5px/1.8 var(--ui);color:var(--dim);margin:0 0 12px;overflow-wrap:anywhere}
@@ -903,7 +905,10 @@ body.museum{font-size:17px;line-height:1.8;overflow-x:clip}
 #zaman .mt-event-source-date{display:block;font:10px/1.65 var(--ui);color:var(--dim);margin-top:8px;overflow-wrap:anywhere}
 #zaman .tev .tb{font-weight:500;margin:0}
 #zaman .tev .td{margin:10px 0 0}
-#zaman .mt-event-unknown{max-width:930px;margin:30px auto 0;padding:20px 24px;background:var(--case);border:1px solid var(--rule);scroll-margin-top:100px}
+#zaman .mt-event-unknown>summary{scroll-margin-top:22px}
+#zaman .mt-event-unknown{max-width:930px;margin:30px auto 0;padding:20px 24px;background:var(--case);border:1px solid var(--rule);scroll-margin-top:12px}
+#vitrin .mg-count-more{margin:-10px 0 18px;font:12px/1.6 var(--ui)}#vitrin .mg-count-more:empty{display:none}
+#vitrin .mg-count-all{background:none;border:0;padding:0;font:inherit;color:var(--brass-lit);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 #zaman .mt-event-unknown>summary{min-height:44px;padding:9px 0;box-sizing:border-box;cursor:pointer;color:var(--brass-lit);font:14px/1.8 var(--ui)}
 #zaman .mt-event-unknown p{font:13px/1.85 var(--ui);color:var(--dim);margin:12px 0}
 #zaman .mt-event-unknown-list{margin:25px 0 0;padding-left:24px}
@@ -994,7 +999,7 @@ body.museum:has(dialog[open]){overflow:hidden;overscroll-behavior:none}
   }
   .museum #m-nav a{display:flex;align-items:center;min-height:44px;font-size:14px;line-height:1.4;padding:10px 12px;white-space:normal}
   .museum #m-nav a[aria-current=location]::after{left:12px;right:12px;bottom:3px}
-  .museum section,.museum :is(.ms-stage,.mglo-item){scroll-margin-top:calc(var(--m-phone-header) + 20px)}
+  .museum section,.museum :is(.ms-stage,.mglo-item){scroll-margin-top:12px}
   .museum .wrap{padding-left:max(22px,var(--m-safe-left));padding-right:max(22px,var(--m-safe-right))}
   .museum footer{padding-left:max(22px,var(--m-safe-left));padding-right:max(22px,var(--m-safe-right));padding-bottom:max(30px,var(--m-safe-bottom))}
   .museum .m-skip{top:calc(8px + var(--m-safe-top));left:max(12px,var(--m-safe-left));min-height:44px}
@@ -1127,12 +1132,14 @@ body.museum:has(dialog[open]){overflow:hidden;overscroll-behavior:none}
 }
 
 /* Short landscape screens keep the menu and modal usable above the browser bars. */
+@media(max-width:860px) and (max-height:520px) and (orientation:landscape){html{scroll-padding-top:calc(64px + var(--m-safe-top))}}
 @media(max-width:960px) and (max-height:520px) and (orientation:landscape){
   .museum .bar{min-height:calc(58px + var(--m-safe-top));padding-block:calc(7px + var(--m-safe-top)) 7px}
   .museum #m-nav{max-height:calc(100dvh - 58px - var(--m-safe-top) - var(--m-safe-bottom) - 8px);padding-block:8px}
-  .museum section{scroll-margin-top:calc(76px + var(--m-safe-top))}
+  .museum section{scroll-margin-top:12px}
   #patlatma #xp-scene{aspect-ratio:16/9;min-height:190px;max-height:calc(100dvh - 110px - var(--m-safe-top) - var(--m-safe-bottom))}
   #patlatma #xp-labels{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #patlatma #xp-focus-dialog .xp-canvas{height:calc(100dvh - 200px - var(--m-safe-top) - var(--m-safe-bottom));min-height:150px;max-height:none}
   #vitrin .mg-dialog{max-height:calc(100dvh - 16px - var(--m-safe-top) - var(--m-safe-bottom))}
   #vitrin .mg-dialog-frame{padding-top:12px;padding-bottom:18px}
 }
@@ -1602,7 +1609,7 @@ body.museum:has(dialog[open]){overflow:hidden;overscroll-behavior:none}
             <button type="button" class="btn" data-xp-view="in" aria-label="Yakınlaştır">+</button><button type="button" class="btn" data-xp-view="out" aria-label="Uzaklaştır">−</button>
             <button type="button" class="btn" id="xp-clear">Tüm parçalar</button>
           </div>
-          <p class="xp-hint" id="xp-help">Tek parmakla veya fareyle sürükleyerek döndürün. İki parmağınızı açıp kapatarak ya da + / − düğmeleriyle yakınlaştırın. Sayfayı kaydırmak için modelin dışına dokunun. Klavyede ok tuşları görünümü döndürür; Tab ile parçaya, Enter ile açıklamasına geçebilirsiniz.</p>
+          <p class="xp-hint" id="xp-help">Tek parmakla veya fareyle sürükleyerek döndürün. İki parmağınızı açıp kapatarak, Ctrl/⌘ + fare tekerleğiyle (büyük görünümde ya da modele tıkladıktan sonra yalnız tekerlekle) ya da + / − düğmeleriyle yakınlaştırın. Telefonda sayfayı kaydırmak için modelin dışına dokunun. Klavyede ok tuşları görünümü döndürür; Tab ile parçaya, Enter ile açıklamasına geçebilirsiniz.</p>
 
           <div class="xp-labels" id="xp-labels" role="group" aria-label="Kaynakta listelenen parçalar"></div>
         </div>
@@ -1742,10 +1749,7 @@ body.museum:has(dialog[open]){overflow:hidden;overscroll-behavior:none}
 
 <footer><div class="m-footer-inner"><div class="m-footer-brand">
 <svg class="m-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><ellipse cx="20" cy="20" rx="9" ry="16" transform="rotate(35 20 20)"/><path d="M3 27 37 13"/></svg>
-<h2>Pirinç ve<br>Gökyüzü.</h2><p>Metinden nesneye, parçadan bütüne.</p><a class="m-return" href="#ust">Başlangıca dön ↑</a></div><div><path d="M100 2 L108 9 L100 16 L92 9 Z" stroke="currentColor" stroke-width="1.2"/>
-    <circle cx="100" cy="9" r="2" fill="currentColor"/>
-    <circle cx="84" cy="9" r="1.4" fill="currentColor"/><circle cx="116" cy="9" r="1.4" fill="currentColor"/>
-  </svg>
+<h2>Pirinç ve<br>Gökyüzü.</h2><p>Metinden nesneye, parçadan bütüne.</p><a class="m-return" href="#ust">Başlangıca dön ↑</a></div><div>
   <p><strong style="color:var(--dim);font-weight:500">Kaynak:</strong> Fuat Sezgin,
     <em>İslam'da Bilim ve Teknik — Arap-İslam Bilimleri Tarihine Giriş</em>, Cilt I.
     Çeviri: Abdurrahman Aliy. İstanbul Büyükşehir Belediyesi Kültür A.Ş., ikinci basım, Nisan 2008.</p>
@@ -1775,10 +1779,13 @@ const svg = (t,a={})=>{const n=document.createElementNS(NS,t); for(const k in a)
 })();
 
 /* ---------- ilerleme cubugu ---------- */
-addEventListener('scroll',()=>{
+const ilerleme=()=>{
   const h=document.documentElement.scrollHeight-innerHeight;
   $('#prog').style.width = h>0 ? (scrollY/h*100)+'%' : '0';
-},{passive:true});
+};
+addEventListener('scroll',ilerleme,{passive:true}); addEventListener('resize',ilerleme);
+if('ResizeObserver' in window) new ResizeObserver(ilerleme).observe(document.body);
+ilerleme();
 
 /* ---------- hero gokyuzu ---------- */
 (function(){
@@ -1867,8 +1874,8 @@ const AST = (()=>{
     const st=STARS.map(s=>{
       const [ra,de]=precess(s.ra,s.de,yil);
       const r=k*tanr(de), a=ra*D;
-      return {...s, ra, de, x:r*Math.sin(a), y:-r*Math.cos(a), r};
-    });
+      return {...s, ra, de, x:-r*Math.sin(a), y:-r*Math.cos(a), r};
+    }).filter(s=>s.r<=k*tanr(-EPS)*1.05);  // ankebut kenari: Oglak donencesi
     const rS=k*tanr( EPS), rW=k*tanr(-EPS);
     return {st, ecl:{cy:(rW-rS)/2, r:(rW+rS)/2}};
   }
@@ -1960,7 +1967,8 @@ function usturlapKur(kok){
     uc.appendChild(svg('circle',{class:'hl',cx:C,cy:C-p.ufuk.cy,r:p.ufuk.r,fill:'none',
       stroke:'var(--verd)','stroke-width':'2',opacity:'.95'}));
     gUfuk.appendChild(uc);
-    const ut=svg('text',{x:C-RP+14,y:C-p.ufuk.cy+p.ufuk.r-8,fill:'var(--verd)','font-size':'10',
+    const ro=RP-22, uy=(p.ufuk.r**2-ro*ro-p.ufuk.cy**2)/(2*p.ufuk.cy), ux=-Math.sqrt(Math.max(0,ro*ro-uy*uy));
+    const ut=svg('text',{x:C+ux+4,y:C+uy-4,fill:'var(--verd)','font-size':'10',
       'font-family':'IBM Plex Sans, sans-serif'}); ut.textContent='ufuk'; gUfuk.appendChild(ut);
     /* semt-i re's */
     gPlak.appendChild(svg('circle',{cx:C,cy:C-p.yZen,r:2.6,fill:'var(--verd)'}));
@@ -1977,14 +1985,14 @@ function usturlapKur(kok){
     rg.appendChild(svg('circle',{class:'hl',cx:C,cy:C,r:k*AST.tanr(-AST.EPS),fill:'none',
       stroke:'var(--brass-lit)','stroke-width':'1.5'}));
     const bg=G('burc');
-    bg.appendChild(svg('circle',{class:'hl',cx:C,cy:C+R.ecl.cy,r:R.ecl.r,fill:'none',
+    bg.appendChild(svg('circle',{class:'hl',cx:C+R.ecl.cy,cy:C,r:R.ecl.r,fill:'none',
       stroke:'var(--rust)','stroke-width':'2.2'}));
     for(let m=0;m<12;m++){
       const lam=m*30*AST.D, e=AST.EPS*AST.D;
       const ra=Math.atan2(Math.sin(lam)*Math.cos(e),Math.cos(lam));
       const de=Math.asin(Math.sin(e)*Math.sin(lam));
       const rr=k*AST.tanr(de/AST.D);
-      bg.appendChild(svg('circle',{cx:C+rr*Math.sin(ra),cy:C-rr*Math.cos(ra),r:2.4,fill:'var(--rust)'}));
+      bg.appendChild(svg('circle',{cx:C-rr*Math.sin(ra),cy:C-rr*Math.cos(ra),r:2.4,fill:'var(--rust)'}));
     }
     gRete.appendChild(bg);
     R.st.forEach(st=>{
@@ -1992,7 +2000,7 @@ function usturlapKur(kok){
       const g=svg('g',{class:'star'}); g.dataset.s=st.la;
       g.appendChild(svg('path',{d:`M${x} ${y-8} L${x+2.6} ${y-2.6} L${x+8} ${y} L${x+2.6} ${y+2.6} L${x} ${y+8} L${x-2.6} ${y+2.6} L${x-8} ${y} L${x-2.6} ${y-2.6} Z`,
         fill:'var(--brass-lit)'}));
-      const t=svg('text',{x:x+10,y:y+3.5,fill:'var(--dim)','font-size':'8.5',
+      const t=svg('text',{x:x-10,y:y+3.5,'text-anchor':'end',fill:'var(--dim)','font-size':'8.5',
         'font-family':'IBM Plex Sans, sans-serif'}); t.textContent=st.tr; g.appendChild(t);
       const tt=svg('title'); tt.textContent=`${st.tr} — ${st.ar} — ${st.la}`; g.appendChild(tt);
       rg.appendChild(g);
@@ -2069,7 +2077,7 @@ function museumCanvasMotion(canvas, draw, isRunning) {
   let frame=0, visible=false;
   const paint=()=>{if(!frame)frame=requestAnimationFrame(()=>{frame=0;draw();});};
   const cancel=()=>{if(frame)cancelAnimationFrame(frame);frame=0;};
-  const next=()=>{if(visible&&!document.hidden&&!reduced.matches&&isRunning())paint();};
+  const next=()=>{if(visible&&!document.hidden&&isRunning())paint();};
   if('IntersectionObserver' in window)new IntersectionObserver(entries=>{
     visible=entries[0].isIntersecting;
     if(visible)paint();else cancel();
@@ -2088,15 +2096,15 @@ function ekuantKur(cv,ctx){
   const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
   const izler=[];
   function ciz(){
-    const W=cv.width,H=cv.height, C={x:W/2,y:H/2+e}, R=Math.min(W,H)*0.31;
+    const W=cv.width,H=cv.height, R=Math.min(W,H)*0.31, ex=e*R/100;  // e: R=100 olcegiyle (olc() ile ayni)
     ctx.clearRect(0,0,W,H);
     const brass=css('--brass'),lit=css('--brass-lit'),verd=css('--verd'),
           rust=css('--rust'),dim=css('--faint'),rule=css('--rule'),lapis=css('--lapis');
-    const E={x:W/2,y:H/2+e}, Cc={x:W/2,y:H/2}, Q={x:W/2,y:H/2-e};
+    const E={x:W/2,y:H/2+ex}, Cc={x:W/2,y:H/2}, Q={x:W/2,y:H/2-ex};
     ctx.strokeStyle=rule; ctx.lineWidth=1.3;
     ctx.beginPath(); ctx.arc(Cc.x,Cc.y,R,0,7); ctx.stroke();
-    const P0=EQ.planet(t,R,e);
-    const P={x:Cc.x+P0.x, y:Cc.y+P0.y};
+    const P0=EQ.planet(t,R,ex);                      // Dunya orijinli
+    const P={x:E.x+P0.x, y:E.y+P0.y};
     /* ekuanttan esit aci */
     ctx.strokeStyle=verd; ctx.lineWidth=1.6; ctx.setLineDash([5,5]);
     ctx.beginPath(); ctx.moveTo(Q.x,Q.y); ctx.lineTo(P.x,P.y); ctx.stroke(); ctx.setLineDash([]);
@@ -2127,8 +2135,8 @@ function ekuantKur(cv,ctx){
   return {
     set e(v){ e=v; izler.length=0; motion.paint(); },
     get e(){ return e; },
-    toggle(){ run=!run&&motion.allowed(); motion.paint(); return run; },
-    setRunning(value){run=Boolean(value)&&motion.allowed();motion.paint();},
+    toggle(){ run=!run; motion.paint(); return run; },
+    setRunning(value){run=Boolean(value);motion.paint();},
     step(){run=false;t+=.15;motion.paint();},
   };
 }
@@ -2165,7 +2173,7 @@ function tusiKur(cv,ctx){
     motion.next();
   }
   ciz();
-  return { toggle(){run=!run&&motion.allowed();motion.paint();return run;}, setRunning(value){run=Boolean(value)&&motion.allowed();motion.paint();}, step(){run=false;a+=.15;motion.paint();} };
+  return { toggle(){run=!run;motion.paint();return run;}, setRunning(value){run=Boolean(value);motion.paint();}, step(){run=false;a+=.15;motion.paint();} };
 }
 </script>
 
@@ -2208,15 +2216,15 @@ function tusiKur(cv,ctx){
       <span class="ds">${esc(p.ds)}</span>`;
     list.appendChild(b);
   });
+  let secili=null;
   const odak=id=>{
+    secili=id;
     stage.classList.toggle('focusing',!!id);
     $$('.apart',U.s).forEach(g=>g.classList.toggle('on',g.dataset.p===id));
     $$('.pitem',list).forEach(b=>b.classList.toggle('on',b.dataset.p===id));
   };
-  const bagla=()=>$$('.apart',U.s).forEach(g=>{
-    g.addEventListener('mouseenter',()=>odak(g.dataset.p));
-    g.addEventListener('click',()=>odak(g.dataset.p)); });
-  bagla();
+  const hedef=e=>{ const g=e.target.closest&&e.target.closest('.apart'); if(g) odak(g.dataset.p); };
+  U.s.addEventListener('mouseover',hedef); U.s.addEventListener('click',hedef);
   $$('.pitem',list).forEach(b=>{ ['mouseenter','focus','click'].forEach(ev=>
     b.addEventListener(ev,()=>odak(b.dataset.p))); });
   stage.addEventListener('mouseleave',()=>odak(null));
@@ -2247,7 +2255,7 @@ function tusiKur(cv,ctx){
       `her enlem için ayrı bir plaka taşınırdı. Zerkâlî'nin “evrensel disk”i tam bu sorunu çözmek için doğdu.`;
   }
   sel.addEventListener('change',()=>{ U.lat=SEHIRLER[+sel.value].lat; tazele(); });
-  yil.addEventListener('input',()=>{ U.yil=+yil.value; bagla(); tazele(); });
+  yil.addEventListener('input',()=>{ U.yil=+yil.value; odak(secili); tazele(); });
   rot.addEventListener('input',()=>{ U.rot=+rot.value; tazele(); });
   tazele();
 })();
@@ -2289,13 +2297,15 @@ function tusiKur(cv,ctx){
 /* ---------- dogruluk defteri ---------- */
 (function(){
   const box=$('#dft'), D=VERI.defter;
-  const mx=Math.max(...D.map(d=>Math.max(d.kitap,d.bugun)));
+  // Bugunku deger ortada; kitabin degeri, isaretli goreli sapma kadar uzakta (en buyuk sapma izin %46'si).
+  const sap=d=>(d.kitap-d.bugun)/d.bugun*100;
+  const mo=Math.max(...D.map(d=>Math.abs(sap(d))));
   D.forEach(d=>{
     const r=el('div','dftr');
-    const p=v=>(v/mx*100);
+    const p=v=>(v===d.bugun?50:50+sap(d)*46/mo);
     r.innerHTML=`<div><div class="dk">${esc(d.k)}</div><div class="dkm">${esc(d.kim)} · ${esc(d.yy)}</div></div>
       <div class="dftbar">
-        <span class="tr"></span>
+        <span class="tr"></span><span class="z"></span>
         <span class="sp" style="left:${Math.min(p(d.kitap),p(d.bugun))}%;width:${Math.abs(p(d.kitap)-p(d.bugun))}%"></span>
         <span class="mk b" style="left:${p(d.bugun)}%" title="bugünkü değer"></span>
         <span class="mk k" style="left:${p(d.kitap)}%" title="kitabın verdiği değer"></span>
@@ -2352,6 +2362,7 @@ function tusiKur(cv,ctx){
     return String(value == null ? '' : value).toLocaleLowerCase('tr')
       .normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i').trim();
   }
+  function nameKey(value) { return String(value == null ? '' : value).replace(/^[^\p{L}\p{N}]+/u, ''); }
   function createRecords(data) {
     let order = 0;
     return ['aletler', 'haritalar', 'kitaplar'].flatMap(group =>
@@ -2363,11 +2374,17 @@ function tusiKur(cv,ctx){
     );
   }
   function filterRecords(records, filter, query) {
-    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    const soft = { p: 'b', b: 'p', t: 'd', d: 't' };
+    const terms = normalize(query).split(/\s+/).filter(Boolean).map(term => {
+      const alt = soft[term.slice(-1)] && term.length > 4
+        ? new RegExp('(^|[^a-z0-9])' + (term.slice(0, -1) + soft[term.slice(-1)]).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        : null;
+      return text => text.includes(term) || (alt !== null && alt.test(text));
+    });
     return records.filter(record => {
       const parts = record.source.parca || [];
       const matchesType = filter === 'hepsi' || (filter === 'parcali' ? parts.length > 0 : record._t === filter);
-      return matchesType && terms.every(term => record._search.includes(term));
+      return matchesType && terms.every(match => match(record._search));
     });
   }
   // Catalog dates can describe publication or construction. A bare numeric y
@@ -2392,7 +2409,7 @@ function tusiKur(cv,ctx){
   }
   function sortRecords(records, order) {
     return records.slice().sort((left, right) => {
-      if (order === 'name') return collator.compare(left.source.ad, right.source.ad) || left._order - right._order;
+      if (order === 'name') return collator.compare(nameKey(left.source.ad), nameKey(right.source.ad)) || left._order - right._order;
       if (order === 'date') {
         const a = recordYear(left.source.tarih), b = recordYear(right.source.tarih);
         const knownA = a !== null, knownB = b !== null;
@@ -2411,6 +2428,9 @@ function tusiKur(cv,ctx){
   const gallery = query('#gal'), count = query('#objCount'), more = query('#objMore'), search = query('#objSearch');
   const filters = query('.filters'), chips = Array.from(root.querySelectorAll('.chip[data-f]'));
   const dialog = query('#mg-record-dialog');
+  const countMore = document.createElement('div');
+  countMore.className = 'mg-count-more';
+  count.after(countMore);
   const records = createRecords(VERI);
   const recordsByKey = new Map(records.map(record => [record._key, record]));
   let activeFilter = (chips.find(chip => chip.classList.contains('on')) || chips[0]).dataset.f;
@@ -2524,17 +2544,33 @@ function tusiKur(cv,ctx){
     const selected = sortRecords(filterRecords(records, activeFilter, searchTerm), sortOrder);
     const fragment = document.createDocumentFragment();
     selected.slice(0, visible).forEach(record => fragment.appendChild(createCard(record)));
+    const elsewhere = searchTerm && activeFilter !== 'hepsi' ? filterRecords(records, 'hepsi', searchTerm).length : 0;
+    const showAll = () => { activeFilter = 'hepsi'; visible = BATCH; draw(); search.focus({ preventScroll: true }); };
     if (!selected.length) {
       const empty = element('div', 'mg-empty');
-      empty.append(element('span', 'mg-empty-mark', '∅'), element('h3', '', 'Bu aramada kayıt bulunamadı.'), element('p', '', 'Daha kısa bir sözcük deneyin veya tüm koleksiyona dönün.'));
-      const clear = button('mg-reset', 'Aramayı ve filtreyi temizle');
-      clear.addEventListener('click', reset);
-      empty.appendChild(clear);
+      if (elsewhere) {
+        empty.append(element('span', 'mg-empty-mark', '∅'), element('h3', '', 'Bu filtrede kayıt yok.'), element('p', '', '“' + searchTerm + '” tüm koleksiyonda ' + elsewhere + ' kayıtta geçiyor.'));
+        const wide = button('mg-reset', 'Tüm koleksiyonda göster');
+        wide.addEventListener('click', showAll);
+        empty.appendChild(wide);
+      } else {
+        empty.append(element('span', 'mg-empty-mark', '∅'), element('h3', '', 'Bu aramada kayıt bulunamadı.'), element('p', '', 'Daha kısa bir sözcük deneyin veya tüm koleksiyona dönün.'));
+        const clear = button('mg-reset', 'Aramayı ve filtreyi temizle');
+        clear.addEventListener('click', reset);
+        empty.appendChild(clear);
+      }
       fragment.appendChild(empty);
     }
     gallery.replaceChildren(fragment);
     const shown = Math.min(visible, selected.length);
-    count.textContent = selected.length + ' kayıt' + (searchTerm ? ' · “' + searchTerm + '” için' : '') + (selected.length ? ' · ' + shown + ' kayıt gösteriliyor' : '');
+    const activeChip = chips.find(chip => chip.dataset.f === activeFilter);
+    count.textContent = selected.length + ' kayıt' + (activeFilter !== 'hepsi' && activeChip ? ' · ' + activeChip.textContent.trim() : '') + (searchTerm ? ' · “' + searchTerm + '” için' : '') + (selected.length ? ' · ' + shown + ' kayıt gösteriliyor' : '');
+    countMore.replaceChildren();
+    if (selected.length && elsewhere > selected.length) {
+      const wide = button('mg-count-all', 'Tüm koleksiyonda ' + elsewhere + ' kaydı göster');
+      wide.addEventListener('click', showAll);
+      countMore.append(wide);
+    }
     more.hidden = shown >= selected.length;
     more.textContent = 'Sonraki ' + Math.min(BATCH, selected.length - shown) + ' kaydı göster';
     chips.forEach(chip => {
@@ -2606,7 +2642,7 @@ function tusiKur(cv,ctx){
       instrument.dispatchEvent(new Event('change', { bubbles: true }));
       location.hash = 'patlatma';
       requestAnimationFrame(() => {
-        section.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+        (section.querySelector('.xp-toolbar') || section).scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
         instrument.focus({ preventScroll: true });
       });
     });
@@ -2638,7 +2674,8 @@ function tusiKur(cv,ctx){
     });
     more.hidden = VERI.vitrin.length<=n;
   };
-  more.addEventListener('click',()=>{ n+=6; draw(); }); draw();
+  more.addEventListener('click',()=>{ const once=n; n+=6; draw();
+    const yeni=box.children[once]; if(yeni){ yeni.tabIndex=-1; yeni.focus({preventScroll:true}); } }); draw();
 })();
 
 /* ---------- alim dizini ---------- */
@@ -2669,7 +2706,8 @@ function tusiKur(cv,ctx){
     more.hidden = a.length<=n;
   };
   s.addEventListener('input',()=>{ q=s.value.trim(); n=12; draw(); });
-  more.addEventListener('click',()=>{ n+=12; draw(); });
+  more.addEventListener('click',()=>{ const once=n; n+=12; draw();
+    const yeni=box.children[once]; if(yeni){ yeni.tabIndex=-1; queueMicrotask(()=>yeni.focus({preventScroll:true})); } });
   draw();
 })();
 </script>
@@ -2947,8 +2985,8 @@ if(typeof module==='object'&&module.exports)module.exports=MuseumWebGLGeometry;
   let gl=null,renderer=null,lost=false,fallbackCanvas=null,fallback=null;
   function inViewport(){const box=scene.getBoundingClientRect();return box.width>0&&box.height>0&&box.bottom>0&&box.right>0&&box.top<(window.innerHeight||Infinity)&&box.left<(window.innerWidth||Infinity);}
   let sceneVisible=inViewport();
-  function canAnimate(){return sceneVisible&&!document.hidden&&!reduced.matches&&inViewport();}
-  function updatePlayAvailability(){q('#xp-play').disabled=reduced.matches||document.hidden||!sceneVisible;}
+  function canAnimate(){return sceneVisible&&!document.hidden&&inViewport();}
+  function updatePlayAvailability(){q('#xp-play').disabled=document.hidden||!sceneVisible;}
   let palette={},themeVersion=0;
   const colors=['ink','ink2','case','case2','brass','brass-lit','brass-dim','verd','verd-dim','lapis','rust','text','dim','faint'];
   const anchorLabel=document.createElement('div'),anchorMarker=document.createElement('span');
@@ -3046,13 +3084,13 @@ if(typeof module==='object'&&module.exports)module.exports=MuseumWebGLGeometry;
     if(p[2]<=0||p[0]<0||p[0]>camera.width||p[1]<0||p[1]>camera.height){anchorLabel.hidden=true;anchorMarker.hidden=true;return;}
     const text=String(selected+1).padStart(2,'0')+' · '+model.parts[selected].ad;if(anchorLabel.textContent!==text)anchorLabel.textContent=text;
     anchorLabel.style.maxWidth=Math.max(100,Math.min(260,camera.width-24))+'px';anchorLabel.hidden=false;anchorMarker.hidden=false;
-    const half=(anchorLabel.offsetWidth||180)/2,labelHeight=anchorLabel.offsetHeight||38,x=Math.max(half+10,Math.min(camera.width-half-10,p[0])),y=Math.max(labelHeight+10,Math.min(camera.height-10,p[1]-12)),left=rect.left-parent.left,top=rect.top-parent.top;
+    const half=(anchorLabel.offsetWidth||180)/2,labelHeight=anchorLabel.offsetHeight||38,x=Math.max(half+10,Math.min(camera.width-half-10,p[0])),y=Math.max(labelHeight+10,Math.min(camera.height-10,p[1]-12)),left=rect.left-parent.left-scene.parentElement.clientLeft,top=rect.top-parent.top-scene.parentElement.clientTop;
     anchorLabel.style.left=(left+x)+'px';anchorLabel.style.top=(top+y)+'px';anchorMarker.style.left=(left+p[0])+'px';anchorMarker.style.top=(top+p[1])+'px';
   }
   function drawFallback(){
     if(!fallbackCanvas){fallbackCanvas=document.createElement('canvas');fallbackCanvas.className='xp-canvas-fallback';fallbackCanvas.setAttribute('aria-hidden','true');Object.assign(fallbackCanvas.style,{position:'absolute',pointerEvents:'none',left:'0',top:'0',width:'100%',height:'100%'});scene.parentElement.appendChild(fallbackCanvas);fallback=fallbackCanvas.getContext('2d');}
     fallbackCanvas.hidden=false;if(!fallback)return;
-    const rect=scene.getBoundingClientRect(),parent=scene.parentElement.getBoundingClientRect();Object.assign(fallbackCanvas.style,{left:(rect.left-parent.left)+'px',top:(rect.top-parent.top)+'px',width:rect.width+'px',height:rect.height+'px'});
+    const rect=scene.getBoundingClientRect(),parent=scene.parentElement.getBoundingClientRect(),host=scene.parentElement;Object.assign(fallbackCanvas.style,{left:(rect.left-parent.left-host.clientLeft)+'px',top:(rect.top-parent.top-host.clientTop)+'px',width:rect.width+'px',height:rect.height+'px'});
     fallbackCanvas.width=scene.width;fallbackCanvas.height=scene.height;fallback.setTransform(scene.width/camera.width,0,0,scene.height/camera.height,0,0);
     const css=c=>'rgb('+c.map(v=>Math.round(Math.max(0,Math.min(1,v))*255)).join(',')+')';fallback.fillStyle=css(palette.ink);fallback.fillRect(0,0,camera.width,camera.height);
     const faces=geometry.pick.map(tri=>({tri,points:tri.p.map(projectPoint)})).sort((a,b)=>b.points.reduce((s,p)=>s+p[2],0)-a.points.reduce((s,p)=>s+p[2],0));
@@ -3083,7 +3121,7 @@ if(typeof module==='object'&&module.exports)module.exports=MuseumWebGLGeometry;
   function stop(){playing=false;cancelAnimationFrame(frame);frame=0;q('#xp-play').setAttribute('aria-pressed','false');q('#xp-play').textContent='Hareketi oynat';}
   function motionHint(){
     const text=model.id==='compass'?'Halkalar birbirine dik iki yönde döner; içteki kap askının hareketini izler.':'Çark ve mil birlikte döner; her eksantrik kendi kaldıraç ve pistonunu sırayla hareket ettirir.';
-    q('#xp-motion-note').textContent=text+(reduced.matches?' Azaltılmış hareket tercihi açık; adım düğmesiyle inceleyin.':' Hareket kendiliğinden başlamaz.');updatePlayAvailability();
+    q('#xp-motion-note').textContent=text+(reduced.matches?' Azaltılmış hareket tercihiniz açık: hareket yalnızca siz oynatırsanız başlar; adım düğmesiyle de inceleyebilirsiniz.':' Hareket kendiliğinden başlamaz.');updatePlayAvailability();
   }
   const pointers=new Map();let pinchDistance=0;
   function clearPointers(){for(const id of pointers.keys())try{if(scene.hasPointerCapture(id))scene.releasePointerCapture(id);}catch(_){}pointers.clear();pinchDistance=0;}
@@ -3117,7 +3155,8 @@ if(typeof module==='object'&&module.exports)module.exports=MuseumWebGLGeometry;
   });
   function endPointer(e){const p=pointers.get(e.pointerId);if(!p)return;const tap=e.type==='pointerup'&&!p.multi&&p.travel<7;pointers.delete(e.pointerId);try{if(scene.hasPointerCapture(e.pointerId))scene.releasePointerCapture(e.pointerId);}catch(_){}pinchDistance=pinch();if(tap){const index=pick(e.clientX,e.clientY);select(index===selected?-1:index);}}
   scene.addEventListener('pointerup',endPointer);scene.addEventListener('pointercancel',endPointer);scene.addEventListener('lostpointercapture',e=>{pointers.delete(e.pointerId);pinchDistance=pinch();});
-  scene.addEventListener('wheel',e=>{e.preventDefault();const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?scene.clientHeight:1);zoom=Math.max(.55,Math.min(3.4,zoom*Math.exp(-delta*.001)));requestRender();},{passive:false});
+  scene.addEventListener('wheel',e=>{const deliberate=e.ctrlKey||e.metaKey,modal=!!scene.closest('dialog[open]');if(!deliberate&&!modal&&document.activeElement!==scene)return;const raw=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?scene.clientHeight:1),delta=deliberate?Math.max(-10,Math.min(10,raw))*10:raw;const next=Math.max(.55,Math.min(3.4,zoom*Math.exp(-delta*.001)));if(next===zoom&&!deliberate&&!modal)return;e.preventDefault();if(next!==zoom){zoom=next;requestRender();}},{passive:false});
+  let gestureZoom=1;scene.addEventListener('gesturestart',e=>{e.preventDefault();gestureZoom=zoom;});scene.addEventListener('gesturechange',e=>{e.preventDefault();if(!Number.isFinite(e.scale))return;zoom=Math.max(.55,Math.min(3.4,gestureZoom*e.scale));requestRender();});scene.addEventListener('gestureend',e=>e.preventDefault());
   function tick(now){if(!playing)return;if(!canAnimate()){stop();return;}if(now-lastTime>=40){phase=(phase+Math.min(now-lastTime,100)*.001)%TAU;lastTime=now;geometryDirty=true;render();}frame=requestAnimationFrame(tick);}
   q('#xp-play').addEventListener('click',()=>{if(playing){stop();return;}if(!canAnimate()){updatePlayAvailability();return;}playing=true;lastTime=performance.now();q('#xp-play').setAttribute('aria-pressed','true');q('#xp-play').textContent='Hareketi durdur';frame=requestAnimationFrame(tick);});
   q('#xp-step').addEventListener('click',()=>{stop();phase=(phase+TAU/24)%TAU;requestRender(true);});
@@ -4934,7 +4973,7 @@ window.MUSEUM_REFERENCE_LINKS = {"tdvSearchBase": "https://islamansiklopedisi.or
   const groups={kesif:'kesif',giris:'kesif',okuma:'kesif',hikaye:'hikaye',iddia:'hikaye',kavramlar:'hikaye',usturlap:'patlatma',ekuant:'patlatma',defter:'patlatma',akdeniz:'patlatma',patlatma:'patlatma',vitrin:'vitrin',etiket:'vitrin',zaman:'zaman','alim-zaman':'alim-zaman',dizin:'alim-zaman'};
   const sections=Array.from(document.querySelectorAll('main section[id]'));
   let queued=false;
-  function update(){queued=false;let id='';for(const s of sections)if(s.getBoundingClientRect().top<=160)id=groups[s.id]||'';links.forEach(a=>{if(a.dataset.mNav===id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
+  function update(){queued=false;let id='';const line=(document.querySelector('.bar')?.getBoundingClientRect().bottom||88)+80;for(const s of sections)if(s.getBoundingClientRect().top<=line)id=groups[s.id]||'';links.forEach(a=>{if(a.dataset.mNav===id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
   function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
   window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);update();
   document.querySelectorAll('[data-m-model]').forEach(button=>button.addEventListener('click',e=>{
@@ -4943,7 +4982,7 @@ window.MUSEUM_REFERENCE_LINKS = {"tdvSearchBase": "https://islamansiklopedisi.or
     if(part)part.click();
     if(button.tagName==='A'){e.preventDefault();history.pushState(null,'','#patlatma');}
     (part||sel).focus({preventScroll:true});
-    document.getElementById('patlatma').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+    (document.querySelector('#patlatma .xp-toolbar')||document.getElementById('patlatma')).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
   }));
   // Mark exposed filter state for the pre-existing scholar control as well.
   const scholars=document.getElementById('schFilters');
@@ -5034,7 +5073,7 @@ window.MUSEUM_REFERENCE_LINKS = {"tdvSearchBase": "https://islamansiklopedisi.or
         const item=node('article','tev');item.dataset.eventRecord=String(record.id);item.dataset.eventStart=String(record.date.start);item.dataset.eventEnd=String(record.date.end);
         const date=record.date.start===record.date.end?String(record.date.start):`${record.date.start}–${record.date.end}`;
         const dateLabel=node('div','ty',date);
-        if(String(record.source.yil).trim()!==date)dateLabel.append(node('span','mt-event-source-date','Kitapta: '+record.source.yil));
+        if(String(record.source.yil).trim().replace(/\s*[-–—]\s*/g,'–')!==date)dateLabel.append(node('span','mt-event-source-date','Kitapta: '+record.source.yil));
         item.append(dateLabel,node('h3','tb',record.source.b||'Olay kaydı'));
         if(record.source.ac)item.append(node('p','td',record.source.ac));box.append(item);
       });
@@ -5042,8 +5081,8 @@ window.MUSEUM_REFERENCE_LINKS = {"tdvSearchBase": "https://islamansiklopedisi.or
       more.hidden=matches.length<=shown;
       all.disabled=start===lower&&end===upper;
     }
-    [from,to].forEach(control=>control.addEventListener('input',()=>{shown=pageSize;draw();}));
-    more.addEventListener('click',()=>{shown+=pageSize;draw();});
+    [from,to].forEach(control=>control.addEventListener('input',()=>{if(+from.value>+to.value){if(control===from)to.value=from.value;else from.value=to.value;}shown=pageSize;draw();}));
+    more.addEventListener('click',()=>{const once=box.children.length;shown+=pageSize;draw();const yeni=box.children[once];if(yeni){yeni.tabIndex=-1;yeni.focus({preventScroll:true});}});
     all.addEventListener('click',()=>{from.value=String(lower);to.value=String(upper);shown=pageSize;draw();focus(count);});
     draw();
   }
