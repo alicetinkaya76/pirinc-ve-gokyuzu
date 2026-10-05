@@ -5153,6 +5153,18 @@ window.MUSEUM_REFERENCE_LINKS = {"tdvSearchBase": "https://islamansiklopedisi.or
   if(root.document.readyState==='loading')root.document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })(typeof window!=='undefined'?window:globalThis);
 </script>
+<script>
+/* Doğrudan bölüm bağlantısıyla (#...) açılışta: yazı tipleri ve görseller yüklenip içerik uzadıktan sonra,
+   kullanıcı henüz kaydırmadıysa hedefe yeniden in. Yumuşak kaydırma bu ilk inişte kapalı. */
+(function(){
+  const id=decodeURIComponent(location.hash.slice(1));if(!id)return;
+  let touched=false;const stop=()=>{touched=true;};
+  ['wheel','touchstart','keydown','pointerdown'].forEach(ev=>addEventListener(ev,stop,{passive:true,once:true}));
+  const go=()=>{if(touched)return;const el=document.getElementById(id);if(!el)return;const html=document.documentElement,prev=html.style.scrollBehavior;html.style.scrollBehavior='auto';el.scrollIntoView({block:'start',behavior:'instant'});html.style.scrollBehavior=prev;};
+  const loaded=new Promise(r=>document.readyState==='complete'?r():addEventListener('load',r,{once:true}));
+  Promise.all([document.fonts?document.fonts.ready:Promise.resolve(),loaded]).then(()=>{go();setTimeout(go,400);setTimeout(go,1200);});
+})();
+</script>
 <!-- XR:BEGIN -->
 <script>
 /* GERÇEK GÖRSEL ATÖLYESİ — müze fotoğrafları ve el yazması çizimlerinden kesilmiş katmanlar.
