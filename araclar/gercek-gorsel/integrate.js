@@ -73,7 +73,7 @@
     if(noteP)noteP.textContent=real?noteReal:note3d;
     if(real&&xr){fetchImages();onView(xr.view,xr.moves());xr.relayout();sync();}else{explode.disabled=false;figure.hidden=true;}
   }
-  const setMode=m=>{mode=m;try{localStorage.setItem('pg-xp-mode',m);}catch(_){}
+  const setMode=m=>{mode=m;if(window.pgTrack)pgTrack('xp_mode',{mode:m});try{localStorage.setItem('pg-xp-mode',m);}catch(_){}
     if(m==='real')near=true;
     apply();if(m==='3d')dispatchEvent(new Event('resize'));};
   bReal.addEventListener('click',()=>setMode('real'));
@@ -83,6 +83,7 @@
     const go=()=>{if(play&&!play.disabled)play.focus({preventScroll:true});else if(++n<30)requestAnimationFrame(go);else if(step)step.focus({preventScroll:true});};
     if(step)step.focus({preventScroll:true});requestAnimationFrame(go);});
   select.addEventListener('change',build);
+  select.addEventListener('change',()=>{if(window.pgTrack)pgTrack('xp_instrument',{instrument:select.value});});
   explode.addEventListener('input',()=>{if(xr)xr.setT(Number(explode.value));});
   q('#xp-reset').addEventListener('click',()=>{if(!xr)return;const spec=SPECS[cur];if(spec&&spec.default&&xr.view&&xr.view.id!==spec.default)xr.setView(spec.default);xr.setT(Number(explode.value));xr.resetAngle();sync();});
   new MutationObserver(sync).observe(scene,{attributes:true,attributeFilter:['data-selected-part']});
